@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Song should match snapshot 1`] = `
+<div>
+  <div
+    class="song-card dark-grey"
+  >
+    <img
+      alt="noImage"
+      class="song-img"
+      src="abc"
+    />
+    <div
+      class="card-bottom"
+    >
+      <div
+        class="right-side"
+      >
+        <p>
+          pop
+        </p>
+        <strong>
+          neha
+        </strong>
+      </div>
+      <div
+        class="left-side"
+      >
+        <div>
+          <button
+            type="button"
+          >
+            <img
+              alt="liked"
+              src="heart-red.svg"
+            />
+            <p>
+              5
+            </p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

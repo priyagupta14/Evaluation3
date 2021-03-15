@@ -27,9 +27,13 @@
     align-self: flex-end;
     div{
         button{
+            height: 2.5rem;
             img{
                 width: 2rem;
                 height: 2rem;
+            }
+            p{
+                border: 1px solid black;
             }
         }
         
@@ -38,5 +42,5 @@
 
 .card-bottom{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }

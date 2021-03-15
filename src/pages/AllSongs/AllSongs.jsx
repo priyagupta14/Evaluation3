@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -45,10 +44,4 @@ AllSongs.propTypes = {
     }),
   ).isRequired,
   updateLikeState: PropTypes.func.isRequired,
-  // allLikeStatus: PropTypes.arrayOf(
-  //   PropTypes.shape({
-  //     like: PropTypes.bool.isRequired,
-  //     count: PropTypes.number.isRequired,
-  //   }),
-  // ).isRequired,
 };

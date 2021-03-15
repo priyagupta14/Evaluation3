@@ -1,0 +1,13 @@
+.landingPage{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button{
+        color: white;
+        border-radius: 25px;
+        background-color: #38497E ;
+        width: 5rem;
+        height: 2rem;
+    }
+}

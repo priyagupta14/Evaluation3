@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should match snapshot 1`] = `
+<div>
+  <div
+    class="landingPage"
+  >
+    <p>
+      :(( seems a bit empty
+    </p>
+    <button
+      type="button"
+    >
+      Sync
+    </button>
+  </div>
+</div>
+`;

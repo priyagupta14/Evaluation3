@@ -8,11 +8,15 @@ exports[`LandingPage should match snapshot 1`] = `
     <p>
       :(( seems a bit empty
     </p>
-    <button
-      type="button"
+    <a
+      href="/allSongs"
     >
-      Sync
-    </button>
+      <button
+        type="button"
+      >
+        Sync
+      </button>
+    </a>
   </div>
 </div>
 `;

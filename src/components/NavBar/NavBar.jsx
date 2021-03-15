@@ -6,11 +6,8 @@ function NavBar() {
     <div className="navBar">
       <p>
         My
-        {' '}
-        <strong>Record</strong>
-        {' '}
+        <strong> Record </strong>
         Shelf
-        {' '}
       </p>
     </div>
 

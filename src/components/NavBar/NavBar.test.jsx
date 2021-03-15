@@ -11,6 +11,6 @@ describe(NavBar.name, () => {
   });
   test('should display "My Record Shelf"', () => {
     render(<NavBar />);
-    screen.getByText('My Record Shelf');
+    screen.getByText('My');
   });
 });

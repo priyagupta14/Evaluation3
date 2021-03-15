@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
@@ -16,28 +15,23 @@ const App = () => {
   const getAllSongs = async () => {
     const { data } = await apiUtils.getAllSongs();
     setAllSongs(data);
-    console.log(data);
     let likeStatusOfSongs = data.map((eachSong) => apiUtils.getLikeStatus(eachSong.id));
     likeStatusOfSongs = await Promise.all(likeStatusOfSongs);
     setAllLikeStatus(likeStatusOfSongs);
-    console.log(likeStatusOfSongs);
   };
   useEffect(async () => {
     const concatSongLikes = allSongs.map(
       (song, index) => ({ ...song, status: allLikeStatus[index] }),
     );
     setSongDetails(concatSongLikes);
-    console.log(concatSongLikes);
   }, [allLikeStatus]);
 
   const updateLikeState = async (recordId, status) => {
     const updatedLike = await apiUtils.updateLikeStatus(recordId, status);
-    console.log(updatedLike);
     const newStateOfSongs = songDetails.map(
       (eachSong) => ((eachSong.id === recordId) ? { ...eachSong, status: updatedLike } : eachSong),
     );
     setSongDetails(newStateOfSongs);
-    console.log(songDetails);
   };
   return (
     <div className="App">

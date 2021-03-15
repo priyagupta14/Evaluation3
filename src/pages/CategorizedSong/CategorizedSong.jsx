@@ -41,7 +41,7 @@ const CategorizedSong = ({ songs, updateLikeState }) => (
 export default CategorizedSong;
 
 CategorizedSong.propTypes = {
-  songs: PropTypes.shape(
+  songs: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,

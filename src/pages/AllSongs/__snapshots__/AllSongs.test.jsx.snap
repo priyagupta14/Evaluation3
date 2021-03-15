@@ -17,6 +17,7 @@ exports[`AllSongs should match snapshot 1`] = `
         >
           <img
             alt="genreIcon"
+            data-testid="cat-page"
             src="icon-genre.svg"
           />
         </button>

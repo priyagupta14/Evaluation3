@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AllSongs from './AllSongs';
@@ -17,7 +17,6 @@ describe(AllSongs.name, () => {
         artist: {
           name: 'abc',
         },
-
         status: {
           data: {
             like: true,
@@ -39,5 +38,11 @@ describe(AllSongs.name, () => {
   test('should display "all Songs"', () => {
     render(<BrowserRouter><AllSongs {...mockProps} /></BrowserRouter>);
     screen.getByText('all songs');
+  });
+  test('should redirect to categorized song page', () => {
+    render(<BrowserRouter><AllSongs {...mockProps} /></BrowserRouter>);
+    const catPage = screen.getByTestId('cat-page');
+    fireEvent.click(catPage);
+    expect(document.location.href).toBe('http://localhost/categoriedByGenre');
   });
 });

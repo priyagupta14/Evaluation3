@@ -12,7 +12,7 @@ function AllSongs({ allSongs, updateLikeState }) {
         <h1>all songs</h1>
         <Link to="/categoriedByGenre">
           <button type="button">
-            <img src={genreIcon} alt="genreIcon" />
+            <img src={genreIcon} alt="genreIcon" data-testid="cat-page" />
           </button>
         </Link>
       </header>

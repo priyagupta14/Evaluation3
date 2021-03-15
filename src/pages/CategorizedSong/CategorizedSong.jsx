@@ -5,7 +5,7 @@ import allSongs from '../../assets/images/icon-grid.svg';
 import Song from '../../components/Song/Song';
 import './CategorizedSong.scss';
 
-const CategorizedSong = ({ songs }) => {
+const CategorizedSong = ({ songs, updateLikeState }) => {
   console.log(songs);
   return (
     <div className="categorizedSong">
@@ -28,6 +28,7 @@ const CategorizedSong = ({ songs }) => {
                 song={song}
                 index={index}
                 status={song.status}
+                updateLikeState={() => updateLikeState(song.id, !song.status.data.like)}
               />
             ))}
           </div>

@@ -1,0 +1,21 @@
+.all-song-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 2rem;
+    padding: 2rem 7rem;
+}
+.allSongs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    header{
+        display: flex;
+        border: 1px solid black;
+        justify-content: space-between;
+        h1{
+            padding: 0rem 10rem 0rem 0rem;
+        }
+        
+    }
+}

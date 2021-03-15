@@ -16,8 +16,11 @@ function Song({ song, index, status }) {
         <div className="left-side">
           {status.data.like ? (
             <div>
-              <img src={liked} alt="liked" />
-              <p>{status.data.count}</p>
+              <button type="button">
+                <img src={liked} alt="liked" />
+                <p>{status.data.count}</p>
+              </button>
+
             </div>
           ) : (
             <div>

@@ -24,8 +24,11 @@ function Song({ song, index, status }) {
             </div>
           ) : (
             <div>
-              <img src={notLiked} alt="not liked" />
-              <p>{status.data.count}</p>
+              <button type="button">
+                <img src={notLiked} alt="not liked" />
+                <p>{status.data.count}</p>
+              </button>
+
             </div>
           ) }
         </div>

@@ -4,8 +4,10 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import AllSongs from './pages/AllSongs/AllSongs';
+import CategorizedSongs from './pages/CategorizedSong/CategorizedSong';
 import LandingPage from './pages/LandingPage/LandingPage';
 import apiUtils from './utils/api/api';
+import categorizedByGenre from './utils/groupBy/groupByGenre';
 
 const App = () => {
   const [allSongs, setAllSongs] = useState([]);
@@ -36,10 +38,9 @@ const App = () => {
         </Route>
         <Route path="/allSongs">
           <AllSongs allSongs={songDetails} />
-          {/* // allLikeStatus={allLikeStatus} */}
         </Route>
         <Route path="/categoriedByGenre">
-          {/* <CategorizedSongs songs={categorizedByGenre(allSongs)} /> */}
+          <CategorizedSongs songs={categorizedByGenre(songDetails)} />
         </Route>
       </Switch>
     </div>

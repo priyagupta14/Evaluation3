@@ -29,6 +29,16 @@ const App = () => {
     setSongDetails(concatSongLikes);
     console.log(concatSongLikes);
   }, [allLikeStatus]);
+
+  const updateLikeState = async (recordId, status) => {
+    const updatedLike = await apiUtils.updateLikeStatus(recordId, status);
+    console.log(updatedLike);
+    const newStateOfSongs = songDetails.map(
+      (eachSong) => ((eachSong.id === recordId) ? { ...eachSong, status: updatedLike } : eachSong),
+    );
+    setSongDetails(newStateOfSongs);
+    console.log(songDetails);
+  };
   return (
     <div className="App">
       <NavBar />
@@ -37,10 +47,13 @@ const App = () => {
           <LandingPage getAllSongs={getAllSongs} />
         </Route>
         <Route path="/allSongs">
-          <AllSongs allSongs={songDetails} />
+          <AllSongs allSongs={songDetails} updateLikeState={updateLikeState} />
         </Route>
         <Route path="/categoriedByGenre">
-          <CategorizedSongs songs={categorizedByGenre(songDetails)} />
+          <CategorizedSongs
+            songs={categorizedByGenre(songDetails)}
+            updateLikeState={updateLikeState}
+          />
         </Route>
       </Switch>
     </div>

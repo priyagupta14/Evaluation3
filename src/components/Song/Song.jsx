@@ -4,7 +4,9 @@ import notLiked from '../../assets/images/heart-gray.svg';
 import liked from '../../assets/images/heart-red.svg';
 import './Song.scss';
 
-function Song({ song, index, status }) {
+function Song({
+  song, index, status, updateLikeState,
+}) {
   return (
     <div className={`song-card ${(index % 2 === 0) ? 'light-grey' : 'dark-grey'}`}>
       <img src={song.albumArtUrl} alt="noImage" />
@@ -14,23 +16,13 @@ function Song({ song, index, status }) {
           <p>{song.artist.name}</p>
         </div>
         <div className="left-side">
-          {status.data.like ? (
-            <div>
-              <button type="button">
-                <img src={liked} alt="liked" />
-                <p>{status.data.count}</p>
-              </button>
-
-            </div>
-          ) : (
-            <div>
-              <button type="button">
-                <img src={notLiked} alt="not liked" />
-                <p>{status.data.count}</p>
-              </button>
-
-            </div>
-          ) }
+          <div>
+            <button type="button" onClick={updateLikeState}>
+              {status.data.like ? <img src={liked} alt="liked" />
+                : <img src={notLiked} alt="not liked" /> }
+              <p>{status.data.count}</p>
+            </button>
+          </div>
         </div>
 
       </div>

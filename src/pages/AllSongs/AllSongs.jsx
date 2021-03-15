@@ -6,7 +6,7 @@ import genreIcon from '../../assets/images/icon-genre.svg';
 import Song from '../../components/Song/Song';
 import './AllSongs.scss';
 
-function AllSongs({ allSongs }) {
+function AllSongs({ allSongs, updateLikeState }) {
   return (
     <div className="allSongs">
       <header>
@@ -26,6 +26,7 @@ function AllSongs({ allSongs }) {
               song={eachSong}
               index={index}
               status={eachSong.status}
+              updateLikeState={() => updateLikeState(eachSong.id, !eachSong.status.data.like)}
             />
           ))
       }
@@ -43,6 +44,7 @@ AllSongs.propTypes = {
       name: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  updateLikeState: PropTypes.func.isRequired,
   // allLikeStatus: PropTypes.arrayOf(
   //   PropTypes.shape({
   //     like: PropTypes.bool.isRequired,

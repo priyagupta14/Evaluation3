@@ -20,7 +20,7 @@ const CategorizedSong = ({ songs, updateLikeState }) => (
     </header>
     {Object.keys(songs).map((eachSong) => (
       <div key={eachSong} className="groupByGenre">
-        {imgArr.find((genre) => ((genre === eachSong) ? <img src={genre} alt="genre" /> : 'eachSong'))}
+        {imgArr.find((genre) => ((genre === eachSong) ? <img src={genre} alt="genre" /> : eachSong))}
         <h1>{eachSong}</h1>
         <div className="all-song-cards">
           {songs[eachSong].map((song, index) => (

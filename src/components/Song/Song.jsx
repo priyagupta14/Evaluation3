@@ -9,11 +9,11 @@ function Song({
 }) {
   return (
     <div className={`song-card ${(index % 2 === 0) ? 'light-grey' : 'dark-grey'}`}>
-      <img src={song.albumArtUrl} alt="noImage" />
+      <img src={song.albumArtUrl} alt="noImage" className="song-img" />
       <div className="card-bottom">
         <div className="right-side">
           <p>{song.genre.name}</p>
-          <p>{song.artist.name}</p>
+          <strong>{song.artist.name}</strong>
         </div>
         <div className="left-side">
           <div>

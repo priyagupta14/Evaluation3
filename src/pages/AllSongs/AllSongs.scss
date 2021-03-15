@@ -14,3 +14,10 @@
         margin: 1rem;
     }
 }
+
+@media screen and (max-width: 24rem) {
+    .all-song-cards {
+      margin: 0%;
+      padding: 0%;
+    }
+  }
